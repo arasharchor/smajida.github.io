@@ -3,42 +3,38 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>DOTA</title>
+	<title>SkyScapes</title>
 	<!-- <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">    
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css"
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!-- <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-	
+
 	<style>
         body {
                background-color : rgb(250,250,250); /*UCLA bgcolor*/
         }
-    </style>	
+    </style>
 </head>
 
 <body>
 
 	<div class="container">
-		
+
 		<div class="row">
 			<div class="span12">
 				<div class="hero-unit">
 					<h1 style="text-align:center; margin-top:60px; font-weight: bold">
-						DOTA: A Large-scale Dataset for Object Detection in Aerial Images
+						Skyscapes -- Fine-Grained Semantic Understanding of Aerial Scenes
 					</h1>
 					<p style="text-align:center; margin-bottom:15px; margin-top:20px; font-size: 18px">
-						<a href="http://captain.whu.edu.cn/xia_En.html">Gui-Song Xia</a>,
-						<a href="http://mclab.eic.hust.edu.cn/~xbai/">Xiang Bai</a>, 
-						<a href="http://captain.whu.edu.cn/dingjian.html">Jian Ding</a>, 
-						<a href="">Zhen Zhu</a>, 
-						<a href="http://vision.cornell.edu/se3/people/serge-belongie/">Serge Belongie</a>, <br>
-						<a href="http://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>, 
-						<a href="http://www.dlr.de/caf/en/desktopdefault.aspx/tabid-5242/8788_read-933/sortby-lastname/">Mihai Datcu</a>, 
-						<a href="http://www.dsi.unive.it/~pelillo/">Marcello Pelillo</a>, 
-						<a href="http://www.lmars.whu.edu.cn/prof_web/zhangliangpei/rs/xueshu.htm">Liangpei Zhang</a>. 
+						<a href="https://www.dlr.de/eoc/en/desktopdefault.aspx/tabid-5242/8788_read-33610/sortby-lastname/">Seyed Majid Azimi</a>,
+						<a>Corentin Henry</a>,
+						<a>Lars Sommer</a>,
+						<a>Arne Schumann</a>,
+						<a>Eleonora Vig</a>.
 					</p>
-				</div>				
+				</div>
 
 				<div class="row">
 					<div class="span4">
@@ -54,7 +50,7 @@
 							</li>
 							<li>
 								<a href="external.html">External</a>
-                            </li>  
+                            </li>
 							<li>
 							<!-- <li> -->
 								<a href="tasks.html">Tasks</a>
@@ -75,217 +71,146 @@
 					Image Source and Usage License
 				</h2>
 				<p style="text-align:justify;">
-					The images of in DOTA-v1.0 dataset are manily collected from the Google Earth, some are taken by satellite JL-1,
-				     the others are taken by satellite GF-2 of the China Centre for Resources Satellite Data and Application.
+	The images were acquired by the German Aerospace Center (DLR) with airborne acquisition flights over several cities in Germany
+	and several European countries. The data collection was carried out with a helicopter or aircraft, Germany using a low-cost camera
+	array system consisting of three DSLR cameras mounted on a flexible platform for recording the data. Only the nadir-looking images
+	 were selected. In total, 16 non-overlapping RGB images of size 5616x3744 pixels were chosen. The flight altitude of about 1000m above
+	 ground led to a GSD of approximately 13cm/pixel. The images represent urban and partly rural areas with highways, first/second order roads,
+	 and complex traffic situations, such as crossings and congestion.
+					</p>
+				<p style="text-align:justify;">
+				Before downloading the dataset, please verify that you understand and will abide the license agreement associated with this dataset.
+				The license is as followed.  Please read it carefully.
+
+        While you should read the actual license in full, here are a few important points I want to emphasize:
+
+        This dataset may ONLY be used for non-commercial uses
+        This means that it cannot be used to train models for commercial use
+        You may NOT redistribute the dataset
+        This includes posting it on a website or sending it to others
+        You may include images from this dataset in academic papers
+        These restrictions include not just the images in their current form but any images created from these images (i.e. “derivative” images)
+        We will be sending the foreground images, alpha mattes, and the code to then composite them onto new backgrounds.  These makes the dataset more flexible plus it will be a much smaller download.  However, this restriction means that after you composite our foregrounds onto new background images, those are considered “derivative” works and are still covered by our license, meaning you cannot use them for commercial use or redistribute them.
+        Models trained using our data may only be distributed (posted on the internet or given to others) under the condition that the model can only be used for non-commercial uses
+        The dataset and code are provided “as is” with no warranty
+        Any publications utilizing this dataset should reference our paper
+					</p>
+
+					<h2>
+	 					License
+	 				</h2>
+					<p style="text-align:justify;">
+
+Please acknowledge that you have read, understood, and agree to abide by the conditions of the license.
+
+	THIS SKYSCAPES DATASET IS PROVIDED UNDER THE TERMS OF THIS LICENSE AGREEMENT    ("AGREEMENT").
+	ANY    USE    OF    THE    DATASET    CONSTITUTES    RECIPIENT'S    ACCEPTANCE OF THIS AGREEMENT.
+	1.DEFINITIONS.
+		a.DATASET means the set of materials provided by Deutsches Zentrum für Luft- und Raumfahrt (DLR) (German Aerospace Center) under this Agreement.
+		b.MODEL means the configuration data resulting from machine learning using the Dataset.
+		c.RECIPIENT means anyone who receives the Dataset under this Agreement.
+
+	2.LICENSE  GRANT.    DLR  hereby  grants  to  Recipient  the  non-exclusive,
+		perpetual,  worldwide, royalty-free right to reproduce, prepare derivative works of,
+		publicly display, and publicly perform, the Dataset  solely  for  non-commercial  purposes.
+		For  the  avoidance  of  doubt,  the  Dataset  may  not  be distributed (except for use of images in the Dataset can be used in academic publications),
+		posted online, or used in or support a commercial product or venture.
+		Models can only be used and distributed for non-commercial purposes and may not be sold.
+
+		3.ATTRIBUTION. Any use of or reference to the Dataset and any permitted distribution of the images or the Model must include the following attribution:
+		Seyed Majid Azimi, Corentin Henry, Lars Sommer, Arne Schumann, Eleonora Vig.  Skyscapes -- Fine-Grained Semantic Understanding of Aerial Scenes.
+		Proceedings of the International Conference on Computer Vision and Pattern Recognition, 2019.
+
+		4.NO WARRANTY. THE DATASET IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, AND ANY  AND  ALL  EXPRESS  OR  IMPLIED  WARRANTIES,
+		INCLUDING  IMPLIED  WARRANTIES  OF  NON-INFRINGEMENT,      MERCHANTABILITY,      FITNESS      FOR      A      PARTICULAR      PURPOSE,      AND
+		NONINFRINGEMENT OF THIRD PARTY RIGHTS ARE DISCLAIMED.  RECIPIENT AGREES THAT IN NO EVENT WILL DLR BE LIABLE TO RECIPIENT OR ANY OTHER PARTY FOR
+		ANY DAMAGES ARISING IN ANY WAY WHATSOEVER FROM THE USE OF THE DATASET.
+		Recipient acknowledges and agrees that use of the Dataset is at Recipient’s sole risk.
+
+		5.LIMITATION OF LIABILITY. IN NO EVENT WILL DLR BE LIABLE FOR ANY DIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OF ANY NATURE WHATSOEVER, INCLUDING, WITHOUT LIMITATION,
+		LOSS  OF  PROFITS  OR  ANY OTHER  COMMERCIAL  LOSS  ARISING  OUT  OF  OR  IN  CONNECTION  WITH  THE  USE  OR  PERFORMANCE  OF  THE  DATASET,
+		EVEN  IF  DLR  HAS  BEEN  ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+		6.GENERAL.
+				a.This  agreement  will  be  governed  by  the  laws  of  Germany  and  the  State  of  Bayern  and  any  disputes  arising  from  this  agreement  will  be  settled  by
+				the  competent  state  or  federal courts located in Munich, Bayern.
+
+				b.This Agreement will immediately terminate if Recipient fails to comply with any of the material terms or conditions of this Agreement.
+				Upon termination of this Agreement, Recipient agrees to cease use and distribution of the Dataset immediately, however Recipient's obligations under this Agreement will continue and survive.
+
+
 				</p>
 				<p style="text-align:justify;">
-						Use of the images from Google Earth must respect the corresponding terms of use:
-						<a href="https://www.google.com/permissions/geoguidelines.html">"Google Earth" terms of use</a>.
-				</p>
-				<p style="text-align:justify;">
-				      All images and their associated annotations in DOTA <strong style="color:blue">can be used for academic purposes only, but any commercial use is prohibited</strong>.
+				      All images and their associated annotations in SkyScapes <strong style="color:blue">can be used for academic purposes only which means any commercial use is prohibited without prior written permission from DLR.</strong>.
 				</p>
 				<h2>
 					Object Category
 				</h2>
 				<p>
-						The object categories in DOTA-v1.0 include: plane, ship, storage tank,
-						baseball diamond, tennis court, basketball court, ground track field, harbor, bridge, large vehicle,
-						small vehicle, helicopter, roundabout, soccer ball field and swimming pool.
+						The semantic annotation in SkyScapes-v1.0 include thirty-one categories: low veg-etation, paved road, non-paved road, paved parking place,non-paved parking place,
+						bike-way, sidewalk, entrance/exit,danger area, building, car, trailer, van, truck, large truck,bus, clutter, impervious surface, tree, and 12 lane-markingtypes.
+						The considered lane-markings are the following:dash-line, long-line, small dash-line, turn sign, plus sign,other signs, crosswalk, stop-line, zebra zone,
+						no parkingzone, parking zone, other lane-markings. The selection ofclasses was influenced by their relevance to real-world ap-plications, hence, road-like objects dominate. .
 				</p>
-				<!-- <p>
-					Fifteen categories are chosen and annotated in our dataset
-					<ul>
-						<li>plane</li>
-						<li>ship</li>
-						<li>storage tank</li>
-						<li>baseball diamond</li>
-						<li>tennis court</li>
-						<li>basketball court</li>
-						<li>ground track field</li>
-						<li>harbor</li>
-						<li>bridge</li>
-						<li>large vehicle</li>  
-						<li>small vehicle</li>
-						<li>helicopter</li> 
-						<li>roundabout</li> 
-						<li>soccer ball field</li>   
-						<li>basketball court</li>  
-
-					</ul>
-
-				</p> -->
 
 				<h2>
 					Annotation format
 				</h2>
 						<p style="text-align:justify; font-size: 17px">
-					In the dataset, each instance's location is annotated by a quadrilateral bounding boxes, which can
-					be denoted as <strong style="color:blue"> "x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>" </strong>  
-					where (x<sub>i</sub>, y<sub>i</sub>) denotes the positions of the oriented bounding boxes' vertices in the image. 
-					The vertices are arranged in a clockwise order.
-					The following is the Visualization of adopted annotation method. The yellow point represents the <strong style="color:blue">starting point</strong>.
-					which refers to: (a) top left corner of a plane, (b) top left corner of a large vehicle
-diamond, (c) the center of sector-shaped baseball. 
+					In the dataset, the images have been annotated with polygons. In the SkyScapes-v1.0, the annotations in the format of images are provided.
+					In the future, the annotations in the format of JSON will be added.
 				</p>
 						<p style="text-align:justify; font-size: 17px">
-						Except the annotation
-						of location, category label is assigned for each instance, which comes from one of the above 15
-						selected categories, and meanwhile a difficult label is provided which indicates whether the instance
-						is difficult to be detected(1 for difficult, 0 for not difficult). Annotations for an image are saved in a text file with the same file name.
-						At the first line, 'imagesource'(from GoogleEarth, GF-2 or JL-1) is given. At the second line, ’gsd’(ground sample distance, the physical size of one image pixel, in meters)
-						is given. <strong style="color:blue">Note if the 'gsd' is missing, it is annotated to be 'null'.</strong>  From third line to last line in annotation text file, annotation for each instance is given. The annotation format is:
-				</p>
-				<pre>
-					<code style="font-size:16px;">
-'imagesource':imagesource
-'gsd':gsd
-x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>, category, difficult
-x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, x<sub>3</sub>, y<sub>3</sub>, x<sub>4</sub>, y<sub>4</sub>, category, difficult
-...						
-					</code>
-				</pre>
+						How to read the annotation is as follows:
 
-				<div class="container">
-						<!-- <div class="row">
-							<div class="col-md-2 col-md-offset-5">
-								<p>
-									visulizationfsfsdfdsffffff,ffffffffff
-								</p>
-							</div>
-						</div> -->
 
-						
-						<div class="row">
-							<div class="col-xs-4 col-md-4">
-								<div class="container">
-									<!-- <h2>Rounded Corners</h2> -->
-									<!-- <img src="http://captain.whu.edu.cn/DOTAweb/images/plane1.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> -->
-										  <img src="http://captain.whu.edu.cn/DOTAweb/images/plane1.jpg" class="img-rounded" alt="Cinque Terre" width="25%">
-										  <!-- <figcaption style="position:absolute; left:180px; font-size:18px;"><strong>(a)</strong></figcaption>  -->
-										  
-										  <figcaption style="position:absolute; left:44%; font-size:18px;"><strong>(a)</strong></figcaption> 
-									<!-- <p style="text-align:center;position:relative"> a </p> -->
-								  </div>
-							  </div>
-							  <div class="col-xs-4 col-md-4">
-								<div class="container">
-									<!-- <h2>Rounded Corners</h2> -->
-									<!-- <img src="http://captain.whu.edu.cn/DOTAweb/images/rotaterec.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> -->
-									<img src="http://captain.whu.edu.cn/DOTAweb/images/rotaterec.jpg" class="img-rounded" alt="Cinque Terre" width="25%">
-									<!-- <figcaption style="position:absolute; left:180px; font-size:18px"> <strong>(b)</strong></figcaption>  -->
-									<figcaption style="position:absolute; left:45%; font-size:18px"> <strong>(b)</strong></figcaption> 
-									<!-- <p style="text-align:center">b </p> -->
-  
-								  </div>
-							  </div>
-							  <div class="col-xs-4 col-md-4">
-								<div class="container">
-									<!-- <h2>Rounded Corners</h2> -->
-									<!-- <img src="http://captain.whu.edu.cn/DOTAweb/images/baseball2.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"> -->
-									<img src="http://captain.whu.edu.cn/DOTAweb/images/baseball2.jpg" class="img-rounded" alt="Cinque Terre" width="25%">
-									<!-- <p style="text-align:center">c </p> -->
-									<!-- <p style="text-align:center">c </p> -->
-									<figcaption style="position:absolute; left:45%; font-size:18px"> <strong>(c)</strong> </figcaption>
-								  </div>
-							  </div>
-						</div>
-					</div>
-				<br>
-				<!-- <img src="instances-DOTA.jpg" class="img-responsive center-block"  /> -->
-				<h2>
-					Development kit
-				</h2>
-				
-				<p>
-					The <a href="https://github.com/CAPTAIN-WHU/DOTA_devkit">Development kit</a> provide the following function
-					<ul>
-						<li>
-							Load and visulize the data.
-						</li>
-						<li>
-							Evaluate the result.
-						</li>
-						<li>
-							Split and merge the data.
-						</li>
-					</ul>
-				</p>
+						SkyScapes-Dense class name, Grayscale pixel value, 	RGB pixel value
 
-				<h2>
-					Trained Models
-				</h2>
 
-				<p>
-					The following is the models trained in DOTA.
-					<ul>
-						<li>
-							<a href="https://github.com/dingjiansw101/RoITransformer_DOTA">RoI Transformer</a> 
-						</li>
-						<li>
-							<a href="https://github.com/jessemelpolio/Faster_RCNN_for_DOTA">Faster R-CNN OBB</a> 
-						</li>
-						<li>
-							<a href="https://github.com/ringringyi/DOTA_models">SSD and R-FCN</a>
-						</li>
-						<li>
-							<a href="https://github.com/ringringyi/DOTA_YOLOv2">YOLO-v2</a>
-						</li>
-					</ul>
+						SkyScapes-Lane class name, 	Grayscale pixel value,	RGB pixel value
+
+						Background – black,	0,	0	0	0
+						Dash Line – between lanes,	1,	255	0	0
+						Long Line – white/yellow,	2,	0	0	255
+						Small dash line – in entrances, crossroads, and so on,	3,	255	255	0
+						Turn signs,	4,	0	255	0
+						Other signs: speed limits, bus, taxi, the disabled, bike and so on,	5,	255	128	0
+						Plus sign in the crossroads,	6,	128	0	0
+						Crosswalk,	7,	0	255	255
+						Stop line,	8,	0	128	0
+						Zebra zone,	9,	255	0	255
+						No parking zone,	10,	0	150	150
+						Parking space, 11,	200	200	0
+						The rest of lane-markings,	12,	100	0	200
 				</p>
 
 				<h2>
 				    Data Download
 				</h2>
-				   <p style="text-align:justify; font-size: 17px"> 
-				   You can download DOTA-v1.0 from either Baidu Drive or Google Drive, according to your network connections. 
+				   <p style="text-align:justify; font-size: 17px">
+				   You can download SkyScapes-v1.0 from DLR website;
 				   </p>
 				<ul>
-					<!-- <li>
-							Dota Training Images <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
-					</li>	
-
-					<li>
-							Dota Validation Images <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
+						<li style="font-size:17px">
+						SkyScapes-v1.0 Trainval dataset download: <a href="https://www.dlr.de/eoc/en/desktopdefault.aspx/tabid-12760/22294_read-58694">TrainVal set</a>
 					</li>
-
-					<li>
-							Testing images <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
-					</li>
-						<!-- <a href="http://captain.whu.edu.cn/datasets/FakeDota_train.tar">DOTA_test</a> -->
-					<!-- <li>
-							Dota Training Annotations <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>
-					</li>
-					<li>
-							Dota Validation Annotations <a href="#">[Google Drive]</a> <a href="#">[Baidu Drive]</a>							
-					</li> -->
-					<li style="font-size:17px">
-						DOTA-v1.0 on Baidu Drive: <a href="https://pan.baidu.com/s/1kWyRGaz">Training set</a>, <a href="https://pan.baidu.com/s/1qZCoF72">Validation set</a>, <a href="https://pan.baidu.com/s/1i6ly9Id">Testing images</a>
-					</li>
-					<li style="font-size:17px">
-						DOTA-v1.0 on Google Drive: <a href="https://drive.google.com/drive/folders/1gmeE3D7R62UAtuIFOB9j2M5cUPTwtsxK?usp=sharing">Training set</a>, <a href="https://drive.google.com/drive/folders/1n5w45suVOyaqY84hltJhIZdtVFD9B224?usp=sharing">Validation set</a>, <a href="https://drive.google.com/drive/folders/1mYOf5USMGNcJRPcvRVJVV1uHEalG5RPl?usp=sharing">Testing images</a>
-					</li>
-					<br>					
+					<br>
 					<br>
 				</ul>
-			
-				
+
+
 			</div>
 		</div>
 	<br>
-	<!--<div align="center">
-		<a href="http://www.amazingcounters.com"><img border="0"
-				src="http://cc.amazingcounters.com/counter.php?i=3220030&c=9660403" alt="AmazingCounters.com"></a>
-	</div> -->
+
+
 			<p align="center">
 			<a href="https://clustrmaps.com/site/1ayvp"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=Vs7kEm-F-yc_I1yR89KMrjHwPuM3LWsU-RKxnqEQh3s&cl=ffffff" /></a>
 		</p>
-	
-	<br>		
+
+	<br>
 	</div>
 
 </body>
 </html>
-
-
-
