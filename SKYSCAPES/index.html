@@ -129,22 +129,54 @@
 					Description
 				</h3>
 				<p style="text-align:justify; font-size: 17px">
-					Dota is a large-scale dataset for object detection in aerial images.
-					It can be used to develop and evaluate object detectors in aerial images.
-					We will continue to update DOTA, to grow in size and scope and to reflect evolving real-world
-					conditions.
-					For the <strong style="color:blue"> DOTA-v1.0</strong>, as described in the <a
-						href="https://arxiv.org/abs/1711.10398">paper</a>, it contains <strong
-						style="color:blue">2806</strong> aerial images from different sensors and platforms.
-					Each image is of the size in the range from about <strong style="color:blue"> 800 &times 800 to 4000
-						&times 4000 </strong> pixels
-					and contains objects exhibiting a wide variety of scales, orientations, and shapes. These DOTA
-					images are then annotated
-					by experts in aerial image interpretation using 15 common object categories. The fully annotated
-					DOTA images
-					contains <strong style="color:blue">188, 282</strong> instances, each of which is labeled by an
-					arbitrary (8 d.o.f.) quadrilateral.
+					Understanding  the  complex  urban  infrastructure  with centimeter-level accuracy is essential for many applications
+from autonomous driving to mapping, infrastructure monitoring,  and  urban  management.    Aerial  images  provide
+valuable  information  over  a  large  area  instantaneously; nevertheless,  no  current  dataset  captures  the  complexity
+of  aerial  scenes  at  the  level  of  granularity  required  by real-world  applications.
+To  address  this,  we  introduce SkyScapes,  an  aerial  image  dataset  with  highly-accurate,
+fine-grained annotations for pixel-level semantic labeling.
+SkyScapes provides annotations for 31 semantic categories
+ranging  from  large  structures,  such  as  buildings,  roads
+and vegetation, to fine details, such as 12 (sub-)categories
+of  lane  markings.    We  have  defined  two  main  tasks  on
+this dataset:  dense semantic segmentation and multi-class
+lane-marking  prediction.
+
+For the <strong style="color:blue"> SkyScapes-v1.0</strong>, as described in the <a
+	href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Azimi_SkyScapes__Fine-Grained_Semantic_Understanding_of_Aerial_Scenes_ICCV_2019_paper.pdf">paper</a>, it contains <strong
+	style="color:blue">2806</strong> aerial images from different sensors and platforms.
+Each image with the size of <strong style="color:blue"> 5616 &times 3744 </strong> pixels
+and contains objects exhibiting a wide variety of scales, orientations, and shapes. These SkyScapes
+images are then annotated by experts in aerial image interpretation.
+
+These 31 semantic classes introduce different challenges. Therefore, we have defined the following benchmarks:
+1) SkyScapes-Dense with 20 classes as the lane-markings were merged into a single class, 2) SkyScapes-Lane with 13 classes
+comprising 12 lane-marking classes and a non-lane-marking one, 3) SkyScapes-Dense-Category with 11 merged classes comprising
+nature (low-vegetation, tree), driving-area (paved, non-paved), parking-area (paved, non-paved), human-area (bikeway, sidewalk,
+danger area), shared human and vehicle area (entrance/exit), road-feature (lane-marking), residential area (building),
+dynamic-vehicle (car, van, truck, large-truck, bus), static-vehicle (trailer), man-made surface (impervious surface),
+and others objects (clutter), 4) SkyScapes-Dense-Edge-Binar, for binary edge segmentation and 5) SkyScapesDense-Edge-Multi
+ for multi-class edge segmentation.
+The fully annotated
+SkyScapes images contains <strong style="color:blue">70,346</strong> instances, each of which is labeled by a polygon.
+
+</p>
+<p style="text-align:justify; font-size: 17px">
+We split the dataset into training, validation, and test sets with 50%, 12.5%, and 37.5% portions respectively.
+We chose this particular split due to the class imbalance and to avoid splitting larger images. The training and
+validation sets will be publicly available. Test images will be released as an online benchmark with undisclosed ground-truth.
+</p>
+
+				<p style="text-align:justify; font-size: 17px">
+The images were acquired by the German Aerospace Center (DLR) with airborne acquisition flights over several cities in Germany
+and several European countries. The data collection was carried out with a helicopter or aircraft, Germany using a low-cost camera
+array system consisting of three DSLR cameras mounted on a flexible platform for recording the data. Only the nadir-looking images
+ were selected. In total, 16 non-overlapping RGB images of size 5616x3744 pixels were chosen. The flight altitude of about 1000m above
+ ground led to a GSD of approximately 13cm/pixel. The images represent urban and partly rural areas with highways, first/second order roads,
+ and complex traffic situations, such as crossings and congestion.
 				</p>
+
+
 				<p style="text-align:justify; font-size: 17px">
 					For more details, refer to the <a href="https://arxiv.org/abs/1711.10398"> <strong
 							style="color:blue">arXiv preprint</strong></a> of DOTA.
