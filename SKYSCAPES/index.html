@@ -144,11 +144,13 @@ lane-marking  prediction.
 
 For the <strong style="color:blue"> SkyScapes-v1.0</strong>, as described in the <a
 	href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Azimi_SkyScapes__Fine-Grained_Semantic_Understanding_of_Aerial_Scenes_ICCV_2019_paper.pdf">paper</a>, it contains <strong
-	style="color:blue">2806</strong> aerial images from different sensors and platforms.
+	style="color:blue">16</strong> very high-resolution aerial images with the Ground Sampling Distance (GSD) of about 13cm.
 Each image with the size of <strong style="color:blue"> 5616 &times 3744 </strong> pixels
 and contains objects exhibiting a wide variety of scales, orientations, and shapes. These SkyScapes
 images are then annotated by experts in aerial image interpretation.
+</p>
 
+<p style="text-align:justify; font-size: 17px">
 These 31 semantic classes introduce different challenges. Therefore, we have defined the following benchmarks:
 1) SkyScapes-Dense with 20 classes as the lane-markings were merged into a single class, 2) SkyScapes-Lane with 13 classes
 comprising 12 lane-marking classes and a non-lane-marking one, 3) SkyScapes-Dense-Category with 11 merged classes comprising
@@ -182,10 +184,16 @@ array system consisting of three DSLR cameras mounted on a flexible platform for
 							style="color:blue">arXiv preprint</strong></a> of DOTA.
 				</p>
 				<h3>
-					Examples of Annotated Images
+					Path example of annotated images in SkyScapes
 				</h3>
 				<img src="DLR-SkyScapes_2.jpg" class="img-responsive center-block" />
+				<h3>
+					Separated SkyScapes-Dense and SkyScapes-Lane benchmark in a path examples of annotated images in SkyScapes
+				</h3>
 				<img src="DLR-SkyScapes_1.jpg" class="img-responsive center-block" />
+				<h3>
+					An original-size example of annotated images in SkyScapes
+				</h3>
 				<img src="DLR-SkyScapes_org_size_image.jpg" class="img-responsive center-block" />
 
 				<div class="section bibtex">
@@ -194,50 +202,44 @@ array system consisting of three DSLR cameras mounted on a flexible platform for
 					</h3>
 					<p> If you make use of the DOTA dataset, please cite our following paper: </p>
 					<pre>
-@InProceedings{Xia_2018_CVPR,
-author = {Xia, Gui-Song and Bai, Xiang and Ding, Jian and Zhu, Zhen and Belongie, Serge and Luo, Jiebo and Datcu, Mihai and Pelillo, Marcello and Zhang, Liangpei},
-title = {DOTA: A Large-Scale Dataset for Object Detection in Aerial Images},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2018}
-}
+						@inproceedings{azimi2019skyscapes,
+						  title={SkyScapes - Fine-Grained Semantic Understanding of Aerial Scenes},
+						  author={Azimi, Seyed Majid and Henry, Corentin and Sommer, Lars and Schumann, Arne and Vig, Eleonora},
+						  booktitle={Proceedings of the IEEE international conference on computer vision},
+						  year={2019}
+						}
 	</pre>
 					<pre>
-@InProceedings{Ding_2019_CVPR,
-author = {Jian Ding, Nan Xue, Yang Long, Gui-Song Xia, Qikai Lu},
-title = {Learning RoI Transformer for Detecting Oriented Objects in Aerial Images},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2019}
-}
+						@article{azimi2018aerial,
+						  title={Aerial LaneNet: Lane-marking semantic segmentation in aerial imagery using wavelet-enhanced cost-sensitive symmetric fully convolutional neural networks},
+						  author={Azimi, Seyed Majid and Fischer, Peter and K{\"o}rner, Marco and Reinartz, Peter},
+						  journal={IEEE Transactions on Geoscience and Remote Sensing},
+						  volume={57},
+						  number={5},
+						  pages={2920--2938},
+						  year={2018},
+						  publisher={IEEE}
+						}
 	</pre>
 				</div>
-				<h3>
+				<!-- <h3>
 					Communicate
 				</h3>
 				<p>
-					For any problem you have in using DOTA or ODAI, you can join the WeChat group and communicate.
-				</p>
-				<img src="images/wechat7.png" height="200" width="200" />
-				<p>
-					Because the number of WeChat groups exceeds 100, invitations are needed, so the discussion group is
-					moved to the <a href="https://jq.qq.com/?_wv=1027&k=5cs05Gq">QQ group</a>.
+					For any problem you have in using SkyScapes, you can contact us using this link:
+				 <a href="https://www.dlr.de/eoc/en/desktopdefault.aspx/tabid-12760/22294_read-58694">Contact US</a>.
 				</p>
 				<p>
 					<strong style="color:red">You can also ask questions and comment on the comment area of the <a
 							href="http://117.78.28.204:8001/">evaluation server page</a> now.</strong>
-				</p>
+				</p> -->
 				<h3>
 					Contact
 				</h3>
 				<p>
 					If you have any the problem or feedback in using DOTA, please contact
 					<ul>
-						<li>Gui-Song Xia at <strong>guisong.xia@whu.edu.cn</strong>, </li>
-						<li>Xiang Bai at <strong>xbai@hust.edu.cn</strong>, </li>
-						<li>Jian Ding at <strong>jian.ding@whu.edu.cn</strong>,</li>
-						<li>Zhen Zhu at <strong>zzhu@hust.edu.cn</strong>.</li>
-						<li>Zhipeng Lin at <strong>linzhipeng@whu.edu.cn</strong>,</li>
+						<li>Seyed Majid Azimi at <a href="https://www.dlr.de/eoc/en/desktopdefault.aspx/tabid-12760/22294_read-58694">Contact US</a> </li>
 					</ul>
 				</p>
 				<br>
@@ -245,10 +247,6 @@ year = {2019}
 		</div>
 	</div>
 	<br>
-	<!--<div align="center">
-		<a href="http://www.amazingcounters.com"><img border="0"
-				src="http://cc.amazingcounters.com/counter.php?i=3220030&c=9660403" alt="AmazingCounters.com"></a>
-	</div> -->
 			<p align="center">
 			<a href="https://clustrmaps.com/site/1ayvp"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=Vs7kEm-F-yc_I1yR89KMrjHwPuM3LWsU-RKxnqEQh3s&cl=ffffff" /></a>
 		</p>
