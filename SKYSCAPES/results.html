@@ -257,7 +257,7 @@
 
 
 		$(document).ready(function () {
-			var table = $('#Benchmark1').DataTable({
+			var table = $('#Task1').DataTable({
 				"ajax": "leaderboards/learderboard1.txt",
 				"columns": [
 					{
@@ -291,7 +291,7 @@
 			});
 
 			// Add event listener for opening and closing details
-			$('#benchmark1 tbody').on('click', 'td.details-control', function () {
+			$('#Task1 tbody').on('click', 'td.details-control', function () {
 				var tr = $(this).closest('tr');
 				var row = table.row(tr);
 
@@ -310,7 +310,7 @@
 
 
 		$(document).ready(function () {
-			var benchmark2 = $('#benchmark2').DataTable({
+			var table2 = $('#Task2').DataTable({
 				"ajax": "leaderboards/learderboard2.txt",
 				"columns": [
 					{
@@ -344,7 +344,7 @@
 			});
 
 			// Add event listener for opening and closing details
-			$('#benchmark2 tbody').on('click', 'td.details-control', function () {
+			$('#Task2 tbody').on('click', 'td.details-control', function () {
 				var tr = $(this).closest('tr');
 				var row = table2.row(tr);
 
